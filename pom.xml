@@ -9,7 +9,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.servico.campanha</groupId>
-  <artifactId>servico-campanha</artifactId>
+  <artifactId>controle-logs-backend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   
@@ -19,6 +19,44 @@
 	</properties>
   
 	<dependencies>
+	
+	<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner -->
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-runner</artifactId>
+    <scope>test</scope>
+</dependency>
+	
+	
+	<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-launcher</artifactId>
+    <scope>test</scope>
+</dependency>
+	
+	<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-commons</artifactId>
+    <scope>test</scope>
+</dependency>
+	
+	  <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>        
+      </dependency>	   
+	
+     	<dependency>
+           <groupId>com.h2database</groupId>
+           <artifactId>h2</artifactId>
+           <scope>runtime</scope>
+        </dependency>
+	
+	    <dependency>
+		  <groupId>org.projectlombok</groupId>
+		  <artifactId>lombok</artifactId>
+		  <scope>provided</scope>
+	    </dependency>
+        
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -42,13 +80,25 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		
+		<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.5</version>
+</dependency>
+		
+		
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-test</artifactId>
+    		<scope>test</scope>
 		</dependency>
 		
 		<dependency>
@@ -84,11 +134,6 @@
             <artifactId>spring-rabbit</artifactId>
          </dependency>
         
-        <dependency>
-           <groupId>com.google.code.gson</groupId>
-           <artifactId>gson</artifactId>    
-        </dependency>
-		
 	</dependencies>
 
 	<build>

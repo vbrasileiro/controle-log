@@ -86,4 +86,10 @@ public class ArquivoLogServiceImpl<R> implements ArquivoLogService{
 		return null;
 	}
 
+	@Override
+	public List<ArquivoLog> buscarArquivoLogPorRangeData(Date data1, Date data2) {
+		return arquivoLogRepository.getAllBetweenDates(data1,data2);
+		
+	}
+
 }
